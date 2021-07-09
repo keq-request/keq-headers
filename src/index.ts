@@ -64,7 +64,7 @@ export function appendHeaders(headers: Record<string, string>): Middleware {
  */
 export function insertHeader(key: string, value: string): Middleware {
   return async(ctx, next) => {
-    if (!ctx.request.headers.has(key)) ctx.set(key, value)
+    if (!ctx.request.headers.has(key)) ctx.headers.set(key, value)
     await next()
   }
 }
@@ -77,7 +77,7 @@ export function insertHeader(key: string, value: string): Middleware {
 export function insertHeaders(headers: Record<string, string>): Middleware {
   return async(ctx, next) => {
     for (const key in headers) {
-      if (!ctx.request.headers.has(key)) ctx.set(key, headers[key])
+      if (!ctx.request.headers.has(key)) ctx.headers.set(key, headers[key])
     }
 
     await next()

@@ -60,7 +60,7 @@
     "@types/node": "^14.14.31"
   },
   "description": "Set/Append headers to request.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "directories": {
     "doc": "doc",
     "test": "tests"

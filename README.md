@@ -1,10 +1,9 @@
 # keq-headers
 
-[![version](https://img.shields.io/npm/v/keq-headers.svg?style=flat-square)](https://www.npmjs.com/package/keq-headers)
-[![downloads](https://img.shields.io/npm/dm/keq-headers.svg?style=flat-square)](https://www.npmjs.com/package/keq-headers)
-[![license](https://img.shields.io/npm/l/keq-headers.svg?style=flat-square)](https://www.npmjs.com/package/keq-headers)
-[![dependencies](https://img.shields.io/david/keq-request/keq-headers.svg?style=flat-square)](https://www.npmjs.com/package/keq-headers)
-[![coveralls](https://img.shields.io/coveralls/github/keq-request/keq-headers.svg?style=flat-square)](https://coveralls.io/github/keq-request/keq-headers)
+[![version](https://img.shields.io/npm/v/keq-headers.svg?style=for-the-badge)](https://www.npmjs.com/package/keq-headers)
+[![downloads](https://img.shields.io/npm/dm/keq-headers.svg?style=for-the-badge)](https://www.npmjs.com/package/keq-headers)
+[![license](https://img.shields.io/npm/l/keq-headers.svg?style=for-the-badge)](https://www.npmjs.com/package/keq-headers)
+[![dependencies](https://img.shields.io/librariesio/release/npm/keq-headers?style=for-the-badge)](https://www.npmjs.com/package/keq-headers)
 
 
 
@@ -61,4 +60,3 @@ request
 ## Contributing & Development
 
 If there is any doubt, it is very welcome to discuss the issue together.
-Please read [Contributor Covenant Code of Conduct](.github/CODE_OF_CONDUCT.md) and [CONTRIBUTING](.github/CONTRIBUTING.md).

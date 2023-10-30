@@ -1,4 +1,4 @@
-import { Middleware } from 'keq'
+import type { KeqMiddleware } from 'keq'
 
 /**
  * Set a header.
@@ -7,7 +7,7 @@ import { Middleware } from 'keq'
  * 设置一个Header
  * 如果Header已经存在，则会覆盖原来的值
  */
-export function setHeader(key: string, value: string): Middleware {
+export function setHeader(key: string, value: string): KeqMiddleware {
   return async(ctx, next) => {
     ctx.request.headers.set(key, value)
     await next()
@@ -19,7 +19,7 @@ export function setHeader(key: string, value: string): Middleware {
  *
  * 追加一个Header
  */
-export function appendHeader(key: string, value: string): Middleware {
+export function appendHeader(key: string, value: string): KeqMiddleware {
   return async(ctx, next) => {
     ctx.request.headers.append(key, value)
     await next()
@@ -33,7 +33,7 @@ export function appendHeader(key: string, value: string): Middleware {
  * 设置多个Header
  * 如果Header已经存在，则会覆盖原来的值
  */
-export function setHeaders(headers: Record<string, string>): Middleware {
+export function setHeaders(headers: Record<string, string>): KeqMiddleware {
   return async(ctx, next) => {
     for (const key in headers) {
       ctx.request.headers.append(key, headers[key])
@@ -47,7 +47,7 @@ export function setHeaders(headers: Record<string, string>): Middleware {
  *
  * 追加多个Header
  */
-export function appendHeaders(headers: Record<string, string>): Middleware {
+export function appendHeaders(headers: Record<string, string>): KeqMiddleware {
   return async(ctx, next) => {
     for (const key in headers) {
       ctx.request.headers.append(key, headers[key])
@@ -62,7 +62,7 @@ export function appendHeaders(headers: Record<string, string>): Middleware {
  *
  * 添加一个Header，如果Header的Key已存在，则不添加
  */
-export function insertHeader(key: string, value: string): Middleware {
+export function insertHeader(key: string, value: string): KeqMiddleware {
   return async(ctx, next) => {
     if (!ctx.request.headers.has(key)) ctx.headers.set(key, value)
     await next()
@@ -74,7 +74,7 @@ export function insertHeader(key: string, value: string): Middleware {
  *
  * 添加多个Header，已存在的Header将被忽略
  */
-export function insertHeaders(headers: Record<string, string>): Middleware {
+export function insertHeaders(headers: Record<string, string>): KeqMiddleware {
   return async(ctx, next) => {
     for (const key in headers) {
       if (!ctx.request.headers.has(key)) ctx.headers.set(key, headers[key])

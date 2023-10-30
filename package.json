@@ -54,5 +54,8 @@
     "standard-version": "^9.5.0",
     "typescript": "^5.2.2",
     "typescript-transform-paths": "^3.4.6"
+  },
+  "peerDependencies": {
+    "keq": "^2"
   }
 }

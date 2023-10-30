@@ -21,8 +21,8 @@
   "license": "MIT",
   "author": "Val.istar.Guo <val.istar.guo@gmail.com>",
   "main": "dist/umd/src/index.js",
-  "types": "dist/esm/src/index.d.ts",
   "module": "dist/esm/src/index.js",
+  "types": "dist/esm/src/index.d.ts",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -37,14 +37,11 @@
     "release:alpha": "standard-version --prerelease alpha",
     "test": "jest"
   },
-  "dependencies": {
-    "@buka/eslint-config": "^1.4.1",
-    "@types/node": "^14.14.31",
-    "ts-patch": "^3.0.2"
-  },
   "devDependencies": {
+    "@buka/eslint-config": "^1.4.1",
     "@commitlint/cli": "^18.2.0",
     "@commitlint/config-conventional": "^18.1.0",
+    "@types/node": "^14.14.31",
     "@typescript-eslint/eslint-plugin": "^6.9.0",
     "@typescript-eslint/parser": "^6.9.0",
     "eslint": "^8.52.0",
@@ -52,6 +49,7 @@
     "is-ci": "^3.0.1",
     "keq": "^2.0.3",
     "standard-version": "^9.5.0",
+    "ts-patch": "^3.0.2",
     "typescript": "^5.2.2",
     "typescript-transform-paths": "^3.4.6"
   },

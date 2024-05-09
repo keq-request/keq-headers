@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.2](https://www.github.com/keq-request/keq-headers/compare/v2.0.1...v2.0.2) (2024-05-09)
+
+
+### Bug Fixes
+
+* insertHeader/insertHeaders cannot insert header ([e0efea4](https://www.github.com/keq-request/keq-headers/commit/e0efea422b4daed19958bbf042f29a8eddd184d5))
+
 ### [2.0.1](https://www.github.com/keq-request/keq-headers/compare/v2.0.0...v2.0.1) (2023-10-30)
 
 

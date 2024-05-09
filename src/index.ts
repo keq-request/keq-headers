@@ -64,7 +64,9 @@ export function appendHeaders(headers: Record<string, string>): KeqMiddleware {
  */
 export function insertHeader(key: string, value: string): KeqMiddleware {
   return async(ctx, next) => {
-    if (!ctx.request.headers.has(key)) ctx.headers.set(key, value)
+    if (!ctx.request.headers.has(key)) {
+      ctx.request.headers.set(key, value)
+    }
     await next()
   }
 }
@@ -77,7 +79,9 @@ export function insertHeader(key: string, value: string): KeqMiddleware {
 export function insertHeaders(headers: Record<string, string>): KeqMiddleware {
   return async(ctx, next) => {
     for (const key in headers) {
-      if (!ctx.request.headers.has(key)) ctx.headers.set(key, headers[key])
+      if (!ctx.request.headers.has(key)) {
+        ctx.request.headers.set(key, headers[key])
+      }
     }
 
     await next()

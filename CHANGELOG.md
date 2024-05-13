@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.3](https://github.com/keq-request/keq-headers/compare/v2.0.2...v2.0.3) (2024-05-13)
+
+
+### Bug Fixes
+
+* setHeaders/appendHeaders causing multiple requests to be sent ([1dba50a](https://github.com/keq-request/keq-headers/commit/1dba50a9dc29cc4e505a648ca8d2f24b731580aa))
+
+
+### Performance Improvements
+
+* add middleware function name ([4c4b411](https://github.com/keq-request/keq-headers/commit/4c4b4112047e7fc85a146461b7d49acdd1de4f17))
+
 ### [2.0.2](https://www.github.com/keq-request/keq-headers/compare/v2.0.1...v2.0.2) (2024-05-09)
 
 

@@ -37,8 +37,9 @@ export function setHeaders(headers: Record<string, string>): KeqMiddleware {
   return async function setHeaders(ctx, next) {
     for (const key in headers) {
       ctx.request.headers.append(key, headers[key])
-      await next()
     }
+
+    await next()
   }
 }
 
@@ -51,8 +52,8 @@ export function appendHeaders(headers: Record<string, string>): KeqMiddleware {
   return async function appendHeaders(ctx, next) {
     for (const key in headers) {
       ctx.request.headers.append(key, headers[key])
-      await next()
     }
+    await next()
   }
 }
 

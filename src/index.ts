@@ -8,7 +8,7 @@ import type { KeqMiddleware } from 'keq'
  * 如果Header已经存在，则会覆盖原来的值
  */
 export function setHeader(key: string, value: string): KeqMiddleware {
-  return async(ctx, next) => {
+  return async function setHeader(ctx, next) {
     ctx.request.headers.set(key, value)
     await next()
   }
@@ -20,7 +20,7 @@ export function setHeader(key: string, value: string): KeqMiddleware {
  * 追加一个Header
  */
 export function appendHeader(key: string, value: string): KeqMiddleware {
-  return async(ctx, next) => {
+  return async function appendHeader (ctx, next) {
     ctx.request.headers.append(key, value)
     await next()
   }
@@ -34,7 +34,7 @@ export function appendHeader(key: string, value: string): KeqMiddleware {
  * 如果Header已经存在，则会覆盖原来的值
  */
 export function setHeaders(headers: Record<string, string>): KeqMiddleware {
-  return async(ctx, next) => {
+  return async function setHeaders(ctx, next) {
     for (const key in headers) {
       ctx.request.headers.append(key, headers[key])
       await next()
@@ -48,7 +48,7 @@ export function setHeaders(headers: Record<string, string>): KeqMiddleware {
  * 追加多个Header
  */
 export function appendHeaders(headers: Record<string, string>): KeqMiddleware {
-  return async(ctx, next) => {
+  return async function appendHeaders(ctx, next) {
     for (const key in headers) {
       ctx.request.headers.append(key, headers[key])
       await next()
@@ -63,7 +63,7 @@ export function appendHeaders(headers: Record<string, string>): KeqMiddleware {
  * 添加一个Header，如果Header的Key已存在，则不添加
  */
 export function insertHeader(key: string, value: string): KeqMiddleware {
-  return async(ctx, next) => {
+  return async function insertHeader (ctx, next) {
     if (!ctx.request.headers.has(key)) {
       ctx.request.headers.set(key, value)
     }
@@ -77,7 +77,7 @@ export function insertHeader(key: string, value: string): KeqMiddleware {
  * 添加多个Header，已存在的Header将被忽略
  */
 export function insertHeaders(headers: Record<string, string>): KeqMiddleware {
-  return async(ctx, next) => {
+  return async function insertHeaders(ctx, next) {
     for (const key in headers) {
       if (!ctx.request.headers.has(key)) {
         ctx.request.headers.set(key, headers[key])

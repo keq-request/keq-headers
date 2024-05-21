@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.4](https://github.com/keq-request/keq-headers/compare/v2.0.3...v2.0.4) (2024-05-21)
+
+
+### Bug Fixes
+
+* setHeaders should override but not ([fd0bc52](https://github.com/keq-request/keq-headers/commit/fd0bc52c995efcc21a33461aa862b0b8db87efe3))
+
 ## [2.0.3](https://github.com/keq-request/keq-headers/compare/v2.0.2...v2.0.3) (2024-05-13)
 
 

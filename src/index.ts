@@ -15,18 +15,6 @@ export function setHeader(key: string, value: string): KeqMiddleware {
 }
 
 /**
- * Append a header
- *
- * 追加一个Header
- */
-export function appendHeader(key: string, value: string): KeqMiddleware {
-  return async function appendHeader (ctx, next) {
-    ctx.request.headers.append(key, value)
-    await next()
-  }
-}
-
-/**
  * Set headers.
  * If it already exists, the original value will be overwritten.
  *
@@ -36,9 +24,21 @@ export function appendHeader(key: string, value: string): KeqMiddleware {
 export function setHeaders(headers: Record<string, string>): KeqMiddleware {
   return async function setHeaders(ctx, next) {
     for (const key in headers) {
-      ctx.request.headers.append(key, headers[key])
+      ctx.request.headers.set(key, headers[key])
     }
 
+    await next()
+  }
+}
+
+/**
+ * Append a header
+ *
+ * 追加一个Header
+ */
+export function appendHeader(key: string, value: string): KeqMiddleware {
+  return async function appendHeader (ctx, next) {
+    ctx.request.headers.append(key, value)
     await next()
   }
 }

@@ -1,6 +1,5 @@
 import { expect, jest, test } from '@jest/globals'
 import { KeqContext } from 'keq'
-import { NEXT_INVOKED_PROPERTY } from 'keq/dist/umd/src/constant'
 import { setHeader, setHeaders,  appendHeader, appendHeaders, insertHeader, insertHeaders  } from './index'
 
 test('setHeader', () => {

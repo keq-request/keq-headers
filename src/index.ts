@@ -37,7 +37,7 @@ export function setHeaders(headers: Record<string, string>): KeqMiddleware {
  * 追加一个Header
  */
 export function appendHeader(key: string, value: string): KeqMiddleware {
-  return async function appendHeader (ctx, next) {
+  return async function appendHeader(ctx, next) {
     ctx.request.headers.append(key, value)
     await next()
   }
@@ -64,7 +64,7 @@ export function appendHeaders(headers: Record<string, string>): KeqMiddleware {
  * 添加一个Header，如果Header的Key已存在，则不添加
  */
 export function insertHeader(key: string, value: string): KeqMiddleware {
-  return async function insertHeader (ctx, next) {
+  return async function insertHeader(ctx, next) {
     if (!ctx.request.headers.has(key)) {
       ctx.request.headers.set(key, value)
     }

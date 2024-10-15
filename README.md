@@ -6,6 +6,11 @@
 [![dependencies](https://img.shields.io/librariesio/release/npm/keq-headers?style=for-the-badge)](https://www.npmjs.com/package/keq-headers)
 [![Codecov](https://img.shields.io/codecov/c/gh/keq-request/keq-headers?logo=codecov&token=PLF0DT6869&style=for-the-badge)](https://codecov.io/gh/keq-request/keq-headers)
 
+[Document EN]: https://keq-request.github.io/guide/libraries/keq-headers
+[Document CN]: https://keq-request.github.io/zh/guide/libraries/keq-headers
+
+[**Document**][Document EN] | [**中文文档**][Document CN]
+
 Set/Append headers to request.
 
 ## Usage
@@ -45,14 +50,14 @@ request
   );
 ```
 
-| Middleware    | Description                                                                |
-| :------------ | :------------------------------------------------------------------------- |
-| setHeader     | Set a header.If it already exists, the original value will be overwritten. |
-| setHeaders    | Set headers.If it already exists, the original value will be overwritten.  |
-| appendHeader  | Append a header.                                                           |
-| appendHeaders | Append headers.                                                            |
-| insertHeader  | Set a header, if it isn't existed.                                         |
-| insertHeaders | Set headers, if it isn't existed.                                          |
+| **Middleware** | **Description**                                                            |
+| :------------- | :------------------------------------------------------------------------- |
+| setHeader      | Set a header.If it already exists, the original value will be overwritten. |
+| setHeaders     | Set headers.If it already exists, the original value will be overwritten.  |
+| appendHeader   | Append a header.                                                           |
+| appendHeaders  | Append headers.                                                            |
+| insertHeader   | Set a header, if it isn't existed.                                         |
+| insertHeaders  | Set headers, if it isn't existed.                                          |
 
 ## Contributing & Development
 

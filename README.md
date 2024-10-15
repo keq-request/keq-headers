@@ -1,4 +1,10 @@
-# keq-headers
+<!-- title -->
+<p align="center" style="padding-top: 41px">
+  <img src="https://raw.githubusercontent.com/keq-request/keq/refs/heads/master/images/logo.svg" width="121" alt="logo" />
+</p>
+
+<h2 align="center" style="text-align: center">KEQ-HEADERS</h2>
+<!-- title -->
 
 [![version](https://img.shields.io/npm/v/keq-headers.svg?style=for-the-badge)](https://www.npmjs.com/package/keq-headers)
 [![downloads](https://img.shields.io/npm/dm/keq-headers.svg?style=for-the-badge)](https://www.npmjs.com/package/keq-headers)
